@@ -1,11 +1,13 @@
 import React from "react";
-import navBar from "./navbar";
+import NavBar from "./navBar";
+import ContentWrapper from "./ContentWrapper";
 
 function App() {
   return (
-      <div>
-        <navBar/>
-      </div>
+    <div>
+        <NavBar/>
+        <ContentWrapper/>
+</div>
   );
 }
 
