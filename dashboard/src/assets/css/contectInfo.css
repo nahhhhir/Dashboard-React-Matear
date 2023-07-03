@@ -1,0 +1,31 @@
+.titulo-reseña {
+    color: #E5D9B6;
+    font-size: 20px;
+    font-weight: bold;
+    margin-top: 0;
+}
+
+.resenia-articulo {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    margin: 5%;
+}
+
+.box-resenia {
+    text-align: center;
+    background-color: #5F8D4E;
+    align-self: center;
+    border-radius: 25px;
+    padding: 2%;
+}
+
+.reseña-home {
+    font-size: 18px;
+    padding: 10px;
+    font-weight: 400;
+    color: #E5D9B6;
+    text-align: center;
+    margin-bottom: 20px;
+}

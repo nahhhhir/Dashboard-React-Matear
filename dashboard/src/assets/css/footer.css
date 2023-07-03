@@ -1,0 +1,73 @@
+.seccionesFooter{
+    margin-bottom: 18px;
+}
+
+.footer{
+background-color: #285430;
+padding: 8% 4% ;
+padding-bottom: 1%;
+color: #E5D9B6;
+-webkit-box-shadow: 0px -9px 15px -2px rgba(0,0,0,0.35);
+-moz-box-shadow: 0px -9px 15px -2px rgba(0,0,0,0.35);
+box-shadow: 0px -9px 15px -2px rgba(0,0,0,0.35);
+}
+
+.footer{
+display: flex;
+flex-wrap: wrap;
+flex-direction: row;
+justify-content: space-around;
+align-items: center; 
+}
+
+.iconosFooter{
+display: flex;
+flex-wrap: wrap;
+flex-direction: row;
+justify-content: space-around;
+align-items: center;
+font-size: 1.8em;
+}
+
+.iconosFooter a{
+    margin: 8px;
+    color: #E5D9B6;
+}
+
+.legal{
+    margin: 0px 10px;
+font-size: 14px;
+}
+
+.legal p a{
+text-decoration: none;
+color: #E5D9B6;
+}
+
+.pie{
+margin-top: 10px;
+display: flex;
+justify-content: flex-start;
+width: 100%;
+}
+
+.iconosFooter a :active{
+    color: #85a255;
+}
+
+
+@media(min-width: 800px){
+.footer{
+flex-direction: row; 
+justify-content: space-around;
+align-items: stretch;
+padding: 3%;
+}
+
+.iconosFooter {
+display: flex;
+}
+.seccionesFooter p{
+font-size: 20px;
+}
+}

@@ -1,0 +1,45 @@
+.todo{
+    display:flex;
+    flex-wrap:wrap;
+    justify-content: center;
+    margin-right:-.75rem;
+    margin-left:-.75rem;
+    color: black;
+}
+
+.img{
+    width: 15em;
+    margin-bottom: 2%;
+    border-radius: 15px;
+}
+
+#flex{
+    display: flex;
+    justify-content: space-evenly;
+    align-items: flex-start;
+}
+
+.text{ 
+    margin: 25px;
+}
+
+.fondo{
+    position:relative;
+    width: 90%;
+    padding-right:.75rem;
+    padding-left:.75rem;
+    margin-bottom: 2%;
+    
+}
+
+@media (min-width: 450px) {
+    .fondo{
+        width: 65%;
+    }
+}
+
+@media (min-width: 900px) {
+    .fondo{
+        width: 50%;
+    }
+}

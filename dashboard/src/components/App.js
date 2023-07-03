@@ -1,13 +1,24 @@
 import React from "react";
-import NavBar from "./navBar";
-import ContentWrapper from "./ContentWrapper";
+
+import NavBar from "./Header";
+import ContentInfo from "./ContentInfo";
+import DetailUltimo from './DetailUltimo';
+import MatearInfo from "./MatearInfo";
+import ListProducts from "./ListProducts";
+import Login from "./Login";
+import Registro from "./Registro";
+import Footer from "./Footer";
 
 function App() {
   return (
-    <div>
+    <div style={{background: '#E5D9B6'}}>
         <NavBar/>
-        <ContentWrapper/>
-</div>
+        <ContentInfo/>
+        <DetailUltimo/>
+        <MatearInfo/>
+        <Footer/>
+        <Registro/>
+    </div>
   );
 }
 

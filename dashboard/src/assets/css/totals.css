@@ -1,0 +1,12 @@
+.icon{
+    font-size: 2em;
+    color: #285430;
+}
+
+.todo{
+    display:flex;
+    flex-wrap:wrap;
+    justify-content: center;
+    margin-right:-.75rem;
+    margin-left:-.75rem;
+}
