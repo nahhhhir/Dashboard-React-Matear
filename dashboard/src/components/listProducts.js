@@ -5,7 +5,7 @@ import product from '../assets/images/mate.jpg'
 
 function ListProducts() {
   return (
-    <div className="main">
+    <div className="main4">
 
       <h1>Catalogo</h1>
 
@@ -18,7 +18,7 @@ function ListProducts() {
 
       <section className="array-products">
 
-        <article className="producto" onclick="location.href='/">
+        <article className="producto" >
 
           <img src={product} alt="Producto" className="imag" />
           <h3>name</h3>
@@ -33,13 +33,3 @@ function ListProducts() {
 }
 
 export default ListProducts;
-
-{/**class App extends Component {
-  render() {
-    const data = [{name: "John Doe", "age": 44}, {name:"Jane Doe", "age": 45}]
-    console.log('App started');
-    return <div>
-    {data.map(person => <p key={person.name}>{`${person.name}, ${person.age} years old`}</p>)}
-    </div>
-  }
-} */}

@@ -1,4 +1,4 @@
-body{
+.errorbody{
     background-color: #E5D9B6;
     padding: 5%;
     text-align: center;
@@ -27,6 +27,6 @@ body{
         width: 40%;
     }
     .h1{ font-size: 200px;}
-    body{ padding: 0 5%}
+    .errorbody{ padding: 0 5%}
     .p{ font-size: 18px;}
 }

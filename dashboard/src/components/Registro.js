@@ -4,60 +4,53 @@ import '../assets/css/registro.css'
 
 function Registro() {
     return (
-        <div >
-            <main class="main2">
-                <form method="POST" class="box-register" action="/users/registro" enctype="multipart/form-data">
+        <div className="main2">
+            <form method="POST" className="box-register" action="/">
+                <h1 className="registrotitle">Regristro</h1>
 
-                    <h1>Regristro</h1>
+                <label className="registro">Nombre de usuario</label>
+                <input type="text" name="username" placeholder="User123456" id="user"
+                    className="in-register" />
 
-                    <label class="registro">Nombre de usuario</label>
-                    <input type="text" name="username" placeholder="User123456" id="user"
-                        class="in-register" value="<%= ey && ey.username ? ey.username : '' %>"/>
+                <label className="registro">Nombre y apellido</label>
+                <input type="text" name="name_lastName" placeholder="Gustavo Cerati" id="name"
+                    className="in-register" />
 
-                        <label class="registro">Nombre y apellido</label>
-                        <input type="text" name="name_lastName" placeholder="Gustavo Cerati" id="name"
-                            class="in-register" value="<%= ey.name_lastName || '' %>"/>
+                <label className="registro">Correo electrónico</label>
+                <input type="email" name="email" placeholder="genarorafault@gmail.com" id="email"
+                    className="in-register" />
 
-                            <label class="registro">Correo electrónico</label>
-                            <input type="email" name="email" placeholder="genarorafault@gmail.com" id="email"
-                                class="in-register" value="<%= ey.email || '' %>"/>
+                <label className="registro">Pais</label>
+                <select name="country" className="in-register form-select">
+                    <option value="argentina">Argentina</option>
+                    <option value="colombia">Colombia</option>
+                    <option value="peru">Peru</option>
+                    <option value="brasil">Brasil</option>
+                    <option value="españa">España</option>
+                </select>
 
-                                <label class="registro">Pais</label>
-                                <select name="country"
-                                    class="in-register form-select" value="<%= ey.country || '' %>">
+                <label className="registro">Domicilio</label>
+                <input type="text" name="direction" placeholder="Calle numero"
+                    className="in-register form-control" />
 
-                                    <option value="">Selecciona un Pais</option>
-                                    <opion>Argentina", "Colombia", "Peru", "Canada","Brasil", "España"</opion>
+                <label className="registro">Avatar</label>
+                <input type="file" name="avatar" id="imag"
+                    className="in-register" />
 
-                                </select>
+                <label className="registro">Contraseña</label>
+                <input type="password" name="password" placeholder="123456789" id="contra"
+                    className="in-register" />
 
+                <label className="registro">
+                    <input type="radio" name="terminos_y_condiciones" />
+                    Acepto terminos y condiciones</label>
 
-                                <label class="registro">Domicilio</label>
-                                <input type="text" name="direction" placeholder="Calle numero"
-                                    class="in-register form-control" value="<%= ey.direction || '' %>"/>
-
-                                    <label class="registro">Avatar</label>
-                                    <input type="file" name="avatar" style="border: none" id="imag"
-                                        class="in-register" value="<%= ey.avatar || '' %>"/>
-
-
-
-                                        <label class="registro">Contraseña</label>
-                                        <input type="password" name="password" placeholder="123456789" id="contra"
-                                            class="in-register"/>
-
-
-                                            <label class="registro">
-                                                <input type="radio" name="terminos_y_condiciones"/> 
-                                                Acepto terminos y condiciones</label>
-
-                                            <div class="boton">
-                                                <button type="submit" class="boton-registro">Crear cuenta</button>
-                                                <button type="reset" class="boton-registro">Borrar</button>
-                                            </div>
-                                        </form>
-                                    </main>
-                                </div>
-                                );
+                <div className="boton">
+                    <button type="submit" className="boton-registro">Crear cuenta</button>
+                    <button type="reset" className="boton-registro">Borrar</button>
+                </div>
+            </form>
+        </div>
+    );
 }
 export default Registro;
