@@ -1,79 +1,65 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 
 import imagen from '../assets/images/mate3.jpeg'
 import '../assets/css/detail.css'
 
-function detailUltimo() {
+function DetailUltimo() {
+	const [categorias, setCategorias] = useState({})
+	const [ultimoProducto, setUltimoProducto] = useState({})
+
+
+	useEffect(() => {
+		fetch("http://localhost:3008/api/products")
+			.then((response) => response.json())
+			.then((data) => {
+				console.log(data.products[data.products.length -1].id)
+				setCategorias(data.countByCategory);
+				setUltimoProducto(data.products[data.products.length -1])
+			})
+			.catch((error) => {
+				console.error(error);
+			});
+	}, [])
+
+
 	return (
 		<div className="todo">
-			
 			{/** Ultimo Producto */}
 			<div className="fondo">
-				<div className="card mb-4" style={{backgroundColor: '#5F8D4E', color: '#E5D9B6',  border:'none'}}>
-					<div className="card-header py-4" style={{backgroundColor: '#5F8D4E', borderColor: '#E5D9B6'}}>
+				<div className="card mb-4" style={{ backgroundColor: '#5F8D4E', color: '#E5D9B6', border: 'none' }}>
+					<div className="card-header py-4" style={{ backgroundColor: '#5F8D4E', borderColor: '#E5D9B6' }}>
 						<h5 className="m-0 font-weight-bold text-white-800">Ultimo producto vendido</h5>
 					</div>
 					<div className="card-body" id="flex">
-							<img className="img" src={imagen} alt="producto.name"/>
+						<img className="img" src={imagen} alt="imagen demostrativa"/>
 						<div className="text">
-						<p>Descripcion lore kjdsbhakjd dsajkfhska dosaifhbiewa fio n fhei uhirrieuagqiugiuergr iw eugheriquwequ</p>
-						<a className="btn btn-danger" rel="nofollow" href="/">Detalle del producto</a>
+							<h3>{ ultimoProducto.name }</h3>
+							<h5>Categoria: { ultimoProducto.categories }</h5>
+							<p>{ ultimoProducto.description }</p>
+							<a className="btn btn-danger" rel="nofollow" href="/">Detalle del producto</a>
 						</div>
 					</div>
 				</div>
 			</div>
-			
+
 			{/** Categorias  */}
 			<div className="col-lg-5 mb-4">
-				<div className="card mb-4" style={{backgroundColor: '#5F8D4E', color: '#E5D9B6',  border:'none'}}>
-					<div className="card-header py-4" style={{backgroundColor: '#5F8D4E', borderColor: '#E5D9B6'}}>
-						<h5 className="m-0 font-weight-bold text-white-800">Genres in Data Base</h5>
+				<div className="card mb-4" style={{ backgroundColor: '#5F8D4E', color: '#E5D9B6', border: 'none' }}>
+					<div className="card-header py-4" style={{ backgroundColor: '#5F8D4E', borderColor: '#E5D9B6' }}>
+						<h5 className="m-0 font-weight-bold text-white-800">Categorias</h5>
 					</div>
 					<div className="card-body">
 						<div className="row">
-							<div className="col-lg-6 mb-4">
-								<div className="card bg-dark text-white">
-									<div className="card-body">
-										Mate
-									</div>
-								</div>
-							</div>
-							<div className="col-lg-6 mb-4">
-								<div className="card bg-dark text-white shadow">
-									<div className="card-body">
-										Bombilla
-									</div>
-								</div>
-							</div>
-							<div className="col-lg-6 mb-4">
-								<div className="card bg-dark text-white shadow">
-									<div className="card-body">
-										Termo
-									</div>
-								</div>
-							</div>
-							<div className="col-lg-6 mb-4">
-								<div className="card bg-dark text-white shadow">
-									<div className="card-body">
-										Set de mate
-									</div>
-								</div>
-							</div>
-							<div className="col-lg-6 mb-4">
-								<div className="card bg-dark text-white shadow">
-									<div className="card-body">
-										Yerba
-									</div>
-								</div>
-							</div>
-							<div className="col-lg-6 mb-4">
-								<div className="card bg-dark text-white shadow">
-									<div className="card-body">
-										Otros
-									</div>
-								</div>
-							</div>
 							
+							{Object.keys(categorias).map((cate) => {
+								return <div className="col-lg-6 mb-4">
+									<div className="card bg-dark text-white">
+										<div className="card-body">
+										{cate}: {categorias[cate]}
+										</div>
+									</div>
+								</div>
+							})}
 
 						</div>
 					</div>
@@ -84,4 +70,4 @@ function detailUltimo() {
 	);
 }
 
-export default detailUltimo;
+export default DetailUltimo;

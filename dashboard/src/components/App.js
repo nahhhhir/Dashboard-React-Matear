@@ -4,6 +4,7 @@ import { BrowserRouter, Route, Switch } from "react-router-dom";
 import NavBar from "./Header";
 import Home from "./Home";
 import ListProducts from "./ListProducts";
+import DetalleProducto from "./DetalleProducto";
 import Login from "./Login";
 import Registro from "./Registro";
 import Footer from "./Footer";
@@ -22,6 +23,7 @@ function App() {
           <Route path="/login" exact={true} component={Login} />
           <Route path="/registro" exact={true} component={Registro} />
           <Route path="/catalogo" exact={true} component={ListProducts} />
+          <Route path="/catalogo/:id" exact={true} component={DetalleProducto} />
           <Route exact={true} component={Error404}/>
 
         </Switch>
@@ -34,3 +36,9 @@ function App() {
 }
 
 export default App;
+
+{/**Total de productos vendidos / total de ventas.
+● Últimos 5 productos vendidos / los 5 más vendidos.
+● Vista de creación de productos como Administrador.
+● Vista de edición de productos como Administrador.
+● Opción de eliminar productos como Administrador. */}
