@@ -1,33 +1,37 @@
 import React from "react";
-import { BrowserRouter, Route, Switch } from "react-router-dom";
+import { Route, Switch } from "react-router-dom";
 
-import NavBar from "./Header";
+import Header from "./Header";
 import Home from "./Home";
 import ListProducts from "./ListProducts";
 import DetalleProducto from "./DetalleProducto";
-import Login from "./Login";
-import Registro from "./Registro";
+import Editar from "./Editar";
 import Footer from "./Footer";
 import Error404 from './Error404'
+import Create from "./Create";
+import ListUser from "./ListUser";
+import DetalleUser from "./DetalleUser";
 
 function App() {
   return (
     <React.Fragment>
       <div style={{ background: '#E5D9B6' }}>
-        <NavBar />
+        <Header />
 
-        <BrowserRouter>
         <Switch>
 
           <Route exact={true} path="/"> <Home/> </Route>
-          <Route path="/login" exact={true} component={Login} />
-          <Route path="/registro" exact={true} component={Registro} />
-          <Route path="/catalogo" exact={true} component={ListProducts} />
-          <Route path="/catalogo/:id" exact={true} component={DetalleProducto} />
+          <Route path="/crear" exact={true} component={Create} />
+          <Route path="/editar" exact={true} component={Editar} />
+
+          <Route path='/listuser' exact={true} component={ListUser} />
+          <Route path='/listuser/:id' exact={true} component={DetalleUser} />
+          <Route path="/productos" exact={true} component={ListProducts} />
+          <Route path="/productos/:id" exact={true} component={DetalleProducto} />
+          
           <Route exact={true} component={Error404}/>
 
         </Switch>
-        </BrowserRouter>
 
         <Footer />
       </div>
@@ -36,9 +40,3 @@ function App() {
 }
 
 export default App;
-
-{/**Total de productos vendidos / total de ventas.
-● Últimos 5 productos vendidos / los 5 más vendidos.
-● Vista de creación de productos como Administrador.
-● Vista de edición de productos como Administrador.
-● Opción de eliminar productos como Administrador. */}

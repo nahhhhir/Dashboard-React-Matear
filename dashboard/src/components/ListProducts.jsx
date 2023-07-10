@@ -1,8 +1,9 @@
 import React, { useEffect, useState } from "react";
+import { Link } from "react-router-dom/cjs/react-router-dom";
 
 import '../assets/css/listProducts.css'
 
-function ListProducts() {
+function ListProducts(props) {
   const [productos, setProductos] = useState([])
 
   useEffect(() => {
@@ -15,8 +16,6 @@ function ListProducts() {
       .catch((error) => {
         console.error(error);
       });
-
-
   }, [])
 
 
@@ -37,9 +36,11 @@ function ListProducts() {
 
             <h2 key={producto.id} className="codigo">Codigo del producto: {producto.id}</h2>
             <h3>{producto.name}</h3>
-            <p > {producto.categories} </p>
+            <p > Categoria: {producto.categories} </p>
             <p className="descripcion">{producto.description}</p>
-            <span className="precio">{producto.price}</span>
+            <Link to={`/productos/${producto.id}`} className="detalle-boton">
+              Detalle de {producto.id}
+            </Link>
 
           </article>
         ))}

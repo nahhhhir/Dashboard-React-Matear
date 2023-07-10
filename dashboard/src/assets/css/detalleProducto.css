@@ -1,0 +1,161 @@
+.title {
+    margin: 0;
+    margin-left: 20px;
+    color: #285430;
+}
+.array-product{
+    margin: 4%;
+}
+
+.products {
+    border-radius: 10px;
+    background-color: #A4BE7B;
+    margin: 20px;
+    padding: 30px 20px;
+    color:  #285430;
+}
+
+.products h3 {
+    margin: 5px;
+    margin-top: 15px;
+}
+
+.products {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    align-content: center;
+}
+
+.imagp {
+    width: 100%;
+    padding-bottom: 10px;
+    border-bottom: #E5D9B6 solid 2px;
+}
+
+.descripcion-de {
+    margin: 0;
+}
+
+.products .precio {
+    color: #cc0000;
+    font-weight: bold;
+}
+
+.botones {
+    display: flex;
+    justify-content: center;
+}
+
+.boton-admin {
+    padding: 5px;
+    margin: 0 5px;
+    border: none;
+    border-radius: 5px;
+    font-size: 1rem;
+    font-weight: bold;
+    text-align: center;
+    color: #E5D9B6;
+    background-color: #285430;
+    cursor: pointer;
+}
+
+.boton-admin:hover {
+    transform: scale(1.1) translateZ(10px);
+    box-shadow: 0 8px 12px rgba(0, 0, 0, 0.2);
+}
+
+.reseñas {
+    margin: 10% 0px 6%;
+    display: flex;
+    background-color: #A4BE7B;
+    border-radius: 10px;
+    color: black;
+}
+
+.reseñas p {
+    font-size: 12px;
+    margin-bottom: 0;
+}
+
+.reseñas h4 {
+    margin: 0px;
+    margin-top: 5px;
+}
+
+.img- {
+    width: 30%;
+    margin-right: 18px;
+    border-radius: 5px;
+    margin-bottom: 0;
+}
+
+.reseña-h2 {
+    margin-top: 12%;
+    margin-bottom: 0px;
+    color: #285430;
+}
+
+@media (min-width:400px) {
+    .products {
+        margin-bottom: 5%;
+    }
+
+    .reseñas{
+        padding: 3% 2%;
+    }
+
+    .reseñas p{
+        font-size: 16px;
+    }
+}
+
+@media (min-width:800px) {
+    .title {
+        font-size: 40px;
+    }
+
+    .products {
+        display: flex;
+        align-items: center;
+        width: 50%;
+    }
+
+    .products img {
+        width: 60%;
+    }
+
+    .array-product {
+        display: flex;
+        align-items: center;
+        flex-direction: column;
+    }
+
+    .reseñas {
+        margin: 3% 0 6%;
+        text-align: center;
+        padding: 1% 3%;
+    }
+
+    .reseñas h4 {
+        margin-top: 10px;
+        font-size: 18px;
+    }
+
+    .reseñas p {
+        font-size: 18px;
+        margin-bottom: 10px;
+        margin-top: 10px;
+    }
+
+    .img- {
+        width: 10%;
+    }
+
+    .reseña-h2 {
+        font-size: 30px;
+        margin-top: 3%;
+        margin-left: 3%;
+        
+    }
+}

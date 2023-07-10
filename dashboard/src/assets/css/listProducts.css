@@ -53,6 +53,9 @@
     margin: 2%;
 }
 
+.descripcion{
+    margin-bottom: 10px;
+}
 
 .boton-fil {
     border: #285430 solid 2px;
@@ -60,6 +63,14 @@
     color: #285430;
     border-radius: 10px;
     padding: 10px;
+}
+
+.detalle-boton{
+    background-color: #285430;
+    color: #E5D9B6;
+    text-decoration: none;
+    padding: 5px 8px;
+    border-radius: 5px;
 }
 
 @media (min-width: 450px) {
@@ -107,4 +118,9 @@
     .filtro {
         justify-content: space-around;
     }
+
+    .descripcion{
+        margin-bottom: 20px;
+    }
+
 }

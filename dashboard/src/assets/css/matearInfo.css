@@ -18,6 +18,8 @@
 }
 
 .folleto {
+    display: flex;
+    justify-content: space-between;
     margin-top: 20px;
 }
 
@@ -28,7 +30,7 @@
     font-size: 18px;
 }
 
-.iconfile{
+.iconfile {
     font-size: 2em;
     color: #E5D9B6;
 }
@@ -42,7 +44,7 @@
 
 @media (min-width: 900px) {
     .matear2022 {
-        width: 150%;
+        max-width: 35%;
         border-radius: 20px;
     }
 
@@ -51,6 +53,7 @@
         padding: 3%;
         align-items: center;
         margin-bottom: 6%;
+        margin-top: 3%;
     }
 
     .info-texto h3 {
@@ -58,8 +61,15 @@
         margin-top: 0;
     }
 
-    .info-texto p {
+    .info-texto textarea {
         font-size: 20px;
+    }
+
+    .info-texto textarea:-moz-read-only,
+    .info-texto textarea:read-only {
+        border: 0;
+        box-shadow: none;
+        background-color:#5F8D4E;
     }
 
     .text-folleto {

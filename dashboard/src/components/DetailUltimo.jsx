@@ -12,7 +12,7 @@ function DetailUltimo() {
 		fetch("http://localhost:3008/api/products")
 			.then((response) => response.json())
 			.then((data) => {
-				console.log(data.products[data.products.length -1].id)
+				console.log(data)
 				setCategorias(data.countByCategory);
 				setUltimoProducto(data.products[data.products.length -1])
 			})
@@ -20,7 +20,6 @@ function DetailUltimo() {
 				console.error(error);
 			});
 	}, [])
-
 
 	return (
 		<div className="todo">
@@ -31,7 +30,7 @@ function DetailUltimo() {
 						<h5 className="m-0 font-weight-bold text-white-800">Ultimo producto vendido</h5>
 					</div>
 					<div className="card-body" id="flex">
-						<img className="img" src={imagen} alt="imagen demostrativa"/>
+						<img className="img" src={ultimoProducto.image} alt="imagen demostrativa"/>
 						<div className="text">
 							<h3>{ ultimoProducto.name }</h3>
 							<h5>Categoria: { ultimoProducto.categories }</h5>

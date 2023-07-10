@@ -4,6 +4,7 @@ import { faPhone, faEnvelope, faTruckFast} from '@fortawesome/free-solid-svg-ico
 import {faInstagram, faFacebook, faTwitter, faCcMastercard, faCcVisa} from '@fortawesome/free-brands-svg-icons'
 
 import "../assets/css/footer.css";
+import { Link } from 'react-router-dom/cjs/react-router-dom.min';
 
 function Footer(){
     return (
@@ -29,9 +30,13 @@ function Footer(){
     <section className="seccionesFooter">
         <p>Informacion y contactos</p>
         <section className="iconosFooter">
-            <a href="/"><FontAwesomeIcon icon={faPhone}/></a>
+            <Link to="/">
+                <FontAwesomeIcon icon={faPhone}/>
+            </Link>
             <FontAwesomeIcon icon={faEnvelope}/>
-            <a href="/products/catalogo"><FontAwesomeIcon icon={faTruckFast}/></a>
+            <Link to="/catalogo">
+                <FontAwesomeIcon icon={faTruckFast}/>
+            </Link>
         </section>
     </section>
 

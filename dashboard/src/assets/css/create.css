@@ -1,0 +1,93 @@
+.main1{
+    background-color: #E5D9B6;
+    padding: 4%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.create{
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    background-color: #5F8D4E;
+    border-radius: 20px;
+    padding: 8%;
+    color: #E5D9B6;
+}
+
+.titulo1{
+    margin-top: 0px;
+    margin-bottom: 5px;
+}
+
+.label-create{
+    font-size: 16px;
+    font-weight: 500;
+    margin-top: 15px;
+    padding: 5px;
+}
+
+.input{
+    border-radius: 8px;
+    border: none;
+    padding: 3px;
+    text-align: center;
+    width: 80%;
+}
+
+.file{
+    width: 80%;
+}
+
+.select select{
+    border-radius: 5px;
+}
+
+.boton{
+    margin: 10px;
+}
+
+.button{
+    font-weight: bold;
+    margin-top: 30px;
+    padding: 5px;
+    align-self: center;
+    background-color: #285430;
+    border: none;
+    border-radius: 15px;
+    color: #E5D9B6;
+    font-size: 16px;
+}
+
+.button:hover{
+    transform: scale(1.1) translateZ(10px);
+    box-shadow: 0 8px 12px rgba(0, 0, 0, 0.2);
+}
+
+@media (min-width: 361px){
+    .label-create{
+        font-size: 23px;
+    }
+
+    .input{
+        width: 300px;
+        height: 30px;
+        align-self: center;
+    }
+}
+
+@media (min-width: 769px){
+    .main{
+        padding: 4%;
+    }
+
+    .create{
+        padding: 6%;
+    }
+
+
+    .button{
+        font-size: 16px;
+    }
+}
