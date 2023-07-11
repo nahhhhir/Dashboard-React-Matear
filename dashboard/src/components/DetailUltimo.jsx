@@ -1,4 +1,5 @@
 import React, { useEffect, useState } from "react";
+import { Link } from "react-router-dom";
 
 import imagen from '../assets/images/mate3.jpeg'
 import '../assets/css/detail.css'
@@ -35,7 +36,9 @@ function DetailUltimo() {
 							<h3>{ ultimoProducto.name }</h3>
 							<h5>Categoria: { ultimoProducto.categories }</h5>
 							<p>{ ultimoProducto.description }</p>
-							<a className="btn btn-danger" rel="nofollow" href="/">Detalle del producto</a>
+							<Link className="btn btn-danger" rel="nofollow" to={`/productos/${ultimoProducto.id}`}>
+							Detalle del producto
+							</Link>
 						</div>
 					</div>
 				</div>
